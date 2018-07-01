@@ -9,4 +9,13 @@
     <string name="register_login_link_text">You have an account? Login</string>
     <string name="menu_settings">Settings</string>
     <string name="menu_logout">Logout</string>
+    <string name="text_view_enter_gist">Fill me up on your latest gist</string>
+    <string name="content_hint">Tell me all about it</string>
+    <string name="caption_hint">What happened?</string>
+    <string name="btn_submit_text">Submit</string>
+    <string name="update_button_text">Update</string>
+    <string name="detail_caption_text">My last holiday</string>
+    <string name="detail_content_text">It is the second day in my new school in Ede, Osun state. Osun is really different from Lagos. I am in Primary Four now and Mummy Ede calls me a big girl. I want to tell her I am still a small child, I am only eight. I like the school. It is not as big but it is more beautiful than Agege Primary where I attended before I came here. I like my new teacher too. Mrs Kolawole is beautiful and smiles a lot and she doesn’t shout at us or leave the class to gossip with other teachers.</string>
+    <string name="edit_text">Edit</string>
+    <string name="delete_text">Delete</string>
 </resources>
