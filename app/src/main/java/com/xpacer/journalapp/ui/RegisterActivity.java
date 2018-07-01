@@ -1,4 +1,4 @@
-package com.xpacer.journalapp;
+package com.xpacer.journalapp.ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.xpacer.journalapp.R;
 import com.xpacer.journalapp.databinding.ActivityRegisterBinding;
 
 public class RegisterActivity extends AppCompatActivity {

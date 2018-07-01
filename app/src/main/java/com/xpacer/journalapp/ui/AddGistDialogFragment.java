@@ -1,4 +1,4 @@
-package com.xpacer.journalapp;
+package com.xpacer.journalapp.ui;
 
 import android.app.Dialog;
 import android.support.annotation.NonNull;
@@ -22,6 +22,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.xpacer.journalapp.utils.AppExecutors;
+import com.xpacer.journalapp.R;
 import com.xpacer.journalapp.data.AppDatabase;
 import com.xpacer.journalapp.data.GistEntry;
 

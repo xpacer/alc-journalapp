@@ -1,8 +1,7 @@
-package com.xpacer.journalapp;
+package com.xpacer.journalapp.ui;
 
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
-import android.arch.lifecycle.ViewModelProviders;
 import android.support.annotation.NonNull;
 
 import com.xpacer.journalapp.data.AppDatabase;

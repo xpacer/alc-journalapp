@@ -1,4 +1,4 @@
-package com.xpacer.journalapp;
+package com.xpacer.journalapp.ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,6 +17,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.xpacer.journalapp.R;
 import com.xpacer.journalapp.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {
@@ -60,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
 
         if (currentUser != null) {
-            proceedToHome(currentUser);
+            proceedToHome(currentUser, false);
         }
     }
 
@@ -80,7 +81,7 @@ public class LoginActivity extends AppCompatActivity {
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             if (user != null) {
-                                proceedToHome(user);
+                                proceedToHome(user, true);
                             }
 
                         } else {
@@ -93,11 +94,12 @@ public class LoginActivity extends AppCompatActivity {
                 });
     }
 
-    private void proceedToHome(FirebaseUser user) {
+    private void proceedToHome(FirebaseUser user, boolean userLoggedIn) {
         Context context = LoginActivity.this;
         Intent startMainIntent = new Intent(context, MainActivity.class);
         startMainIntent.putExtra(MainActivity.USER_EMAIL_EXTRA, user.getEmail());
         startMainIntent.putExtra(MainActivity.USER_DISPLAY_NAME_EXTRA, user.getDisplayName());
+        startMainIntent.putExtra(MainActivity.FROM_LOGIN, userLoggedIn);
 
         startActivity(startMainIntent);
     }

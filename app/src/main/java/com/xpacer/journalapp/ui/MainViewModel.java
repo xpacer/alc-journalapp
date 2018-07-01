@@ -1,4 +1,4 @@
-package com.xpacer.journalapp;
+package com.xpacer.journalapp.ui;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;

@@ -1,4 +1,4 @@
-package com.xpacer.journalapp;
+package com.xpacer.journalapp.ui;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,10 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.xpacer.journalapp.R;
 import com.xpacer.journalapp.data.GistEntry;
 
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;

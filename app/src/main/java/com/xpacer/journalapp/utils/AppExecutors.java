@@ -1,4 +1,4 @@
-package com.xpacer.journalapp;
+package com.xpacer.journalapp.utils;
 
 import android.os.Handler;
 import android.os.Looper;

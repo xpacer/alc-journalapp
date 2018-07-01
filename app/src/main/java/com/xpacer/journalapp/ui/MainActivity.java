@@ -1,4 +1,4 @@
-package com.xpacer.journalapp;
+package com.xpacer.journalapp.ui;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -28,6 +28,8 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.xpacer.journalapp.utils.AppExecutors;
+import com.xpacer.journalapp.R;
 import com.xpacer.journalapp.data.AppDatabase;
 import com.xpacer.journalapp.data.GistEntry;
 import com.xpacer.journalapp.databinding.ActivityMainBinding;
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements JournalGistAdapte
 
     public static final String USER_DISPLAY_NAME_EXTRA = "user_display_name";
     public static final String USER_EMAIL_EXTRA = "user_email";
+    public static final String FROM_LOGIN = "from_login";
 
     private FirebaseAuth mAuth;
     private FirebaseUser mFirebaseUser;
@@ -138,7 +141,7 @@ public class MainActivity extends AppCompatActivity implements JournalGistAdapte
 
         List<GistEntry> gistEntries = mViewModel.getGists().getValue();
 
-        if (gistEntries == null || gistEntries.size() == 0)
+        if (getIntent().hasExtra(FROM_LOGIN) && getIntent().getBooleanExtra(FROM_LOGIN, false))
             initFromFirestoreCollection();
 
     }
