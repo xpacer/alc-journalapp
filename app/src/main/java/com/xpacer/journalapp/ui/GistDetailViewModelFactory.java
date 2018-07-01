@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModelProvider;
 import android.support.annotation.NonNull;
 
 import com.xpacer.journalapp.data.AppDatabase;
+import com.xpacer.journalapp.ui.viewmodels.GistDetailViewModel;
 
 public class GistDetailViewModelFactory extends ViewModelProvider.NewInstanceFactory {
 

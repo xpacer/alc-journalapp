@@ -4,6 +4,7 @@ import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
 
 import com.xpacer.journalapp.data.AppDatabase;
+import com.xpacer.journalapp.ui.viewmodels.AddGistViewModel;
 
 public class AddGistViewModelFactory extends ViewModelProvider.NewInstanceFactory {
     private final AppDatabase mDb;

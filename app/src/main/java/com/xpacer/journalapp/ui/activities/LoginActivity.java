@@ -1,4 +1,4 @@
-package com.xpacer.journalapp.ui;
+package com.xpacer.journalapp.ui.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -66,8 +66,14 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void login(String email, String password) {
-        if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
-            Toast.makeText(LoginActivity.this, "Please do not leave any field empty",
+        if (TextUtils.isEmpty(email)) {
+            Toast.makeText(LoginActivity.this, "Email field should not be empty",
+                    Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (TextUtils.isEmpty(password)) {
+            Toast.makeText(LoginActivity.this, "Password field should not be empty",
                     Toast.LENGTH_SHORT).show();
             return;
         }

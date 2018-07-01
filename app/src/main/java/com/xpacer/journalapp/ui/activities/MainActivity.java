@@ -1,4 +1,4 @@
-package com.xpacer.journalapp.ui;
+package com.xpacer.journalapp.ui.activities;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -28,6 +28,9 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.xpacer.journalapp.ui.fragments.AddGistDialogFragment;
+import com.xpacer.journalapp.ui.adapters.JournalGistAdapter;
+import com.xpacer.journalapp.ui.viewmodels.MainViewModel;
 import com.xpacer.journalapp.utils.AppExecutors;
 import com.xpacer.journalapp.R;
 import com.xpacer.journalapp.data.AppDatabase;
@@ -85,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements JournalGistAdapte
 
         switch (itemId) {
             case R.id.menu_settings:
-                //TODO: Go to settings Page
+                goToSettings();
                 break;
             case R.id.menu_logout:
                 logout();
@@ -110,6 +113,12 @@ public class MainActivity extends AppCompatActivity implements JournalGistAdapte
         Context context = MainActivity.this;
         Intent startLoginIntent = new Intent(context, LoginActivity.class);
         startActivity(startLoginIntent);
+    }
+
+    private void goToSettings() {
+        Context context = MainActivity.this;
+        Intent startSettingsIntent = new Intent(context, SettingsActivity.class);
+        startActivity(startSettingsIntent);
     }
 
     private void setUpView() {

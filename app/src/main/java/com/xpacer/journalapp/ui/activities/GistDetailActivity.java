@@ -1,4 +1,4 @@
-package com.xpacer.journalapp.ui;
+package com.xpacer.journalapp.ui.activities;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -23,6 +23,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.xpacer.journalapp.ui.fragments.AddGistDialogFragment;
+import com.xpacer.journalapp.ui.viewmodels.GistDetailViewModel;
+import com.xpacer.journalapp.ui.GistDetailViewModelFactory;
 import com.xpacer.journalapp.utils.AppExecutors;
 import com.xpacer.journalapp.R;
 import com.xpacer.journalapp.data.AppDatabase;
