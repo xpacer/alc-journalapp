@@ -9,11 +9,13 @@ Clone or download this project and run in android studio.
 
 ### Prerequisites
 
-Java installed on your system
-Android studio is required to run the project files.
-
+First of all, ensure that
 ```
-Give examples
+Java installed on your system
+```
+then, also ensure
+```
+A very recent version of Android Studio is installed on your system.
 ```
 
 ### Installing
