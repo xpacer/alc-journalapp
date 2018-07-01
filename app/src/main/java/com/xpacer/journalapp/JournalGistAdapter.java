@@ -11,6 +11,10 @@ import android.widget.TextView;
 
 import com.xpacer.journalapp.data.GistEntry;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class JournalGistAdapter extends Adapter<JournalGistAdapter.GistViewHolder> {
@@ -52,29 +56,35 @@ public class JournalGistAdapter extends Adapter<JournalGistAdapter.GistViewHolde
 
     class GistViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private TextView mCaption;
-        private TextView mContent;
+        private TextView mDate;
 
 
         GistViewHolder(View itemView) {
             super(itemView);
             mCaption = itemView.findViewById(R.id.text_view_caption);
-            mContent = itemView.findViewById(R.id.text_view_content);
+            mDate = itemView.findViewById(R.id.text_view_date);
             itemView.setOnClickListener(this);
         }
 
         void bind(int position) {
             String caption = mJournalData.get(position).getCaption();
-            String content = mJournalData.get(position).getContent();
+            Date date = mJournalData.get(position).getCreatedAt();
+            DateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
             mCaption.setText(caption);
-            mContent.setText(content);
+            // Convert Date to String in Java
+            String dateString = sdf.format(date);
+            mDate.setText(dateString);
+
         }
+
 
         @Override
         public void onClick(View view) {
             String elementId = mJournalData.get(getAdapterPosition()).getId();
             mItemClickListener.onItemClickListener(elementId);
         }
+
     }
 
     public void setJournalData(List<GistEntry> journalData) {

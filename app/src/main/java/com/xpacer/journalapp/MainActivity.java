@@ -137,6 +137,7 @@ public class MainActivity extends AppCompatActivity implements JournalGistAdapte
         });
 
         List<GistEntry> gistEntries = mViewModel.getGists().getValue();
+
         if (gistEntries == null || gistEntries.size() == 0)
             initFromFirestoreCollection();
 
@@ -159,6 +160,11 @@ public class MainActivity extends AppCompatActivity implements JournalGistAdapte
         FragmentTransaction fragmentTransaction = getFragmentTransaction();
         DialogFragment dialogFragment = new AddGistDialogFragment();
         dialogFragment.show(fragmentTransaction, AddGistDialogFragment.DIALOG_TAG);
+    }
+
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
     }
 
     @Override

@@ -14,28 +14,25 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/text_view_caption"
-            android:layout_alignLeft="@id/text_view_content"
-            android:layout_alignRight="@id/text_view_content"
-            android:layout_width="wrap_content"
+            android:id="@+id/text_view_date"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="13sp"
-            android:textColor="#ffffff"
-            android:background="#1976D2"
-            android:gravity="center_horizontal"
-            tools:text="Hi GAMBIA"
-            android:layout_alignStart="@id/text_view_content"
-            android:layout_alignEnd="@id/text_view_content" />
+            android:textSize="12sp"
+            android:gravity="end"
+            tools:text="12/09/2013"
+            android:padding="5dp"
+            style="@style/TextAppearance.AppCompat.Small"/>
 
         <TextView
-            android:id="@+id/text_view_content"
-            android:layout_width="wrap_content"
+            android:id="@+id/text_view_caption"
+            android:layout_below="@id/text_view_date"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/text_view_caption"
             android:singleLine="false"
             android:gravity="start"
             android:padding="5dp"
-            android:textSize="13sp"
+            style="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/colorBlack"
             tools:text="Welcome to gambia" />
 
     </RelativeLayout>

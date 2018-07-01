@@ -30,6 +30,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/email_hint"
                 android:inputType="textEmailAddress"
+                android:textColor="@color/colorWhite"
                 android:theme="@style/editTextWhiteStyle" />
 
             <EditText
@@ -38,6 +39,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/password_hint"
                 android:inputType="textPassword"
+                android:textColor="@color/colorWhite"
                 android:theme="@style/editTextWhiteStyle" />
 
             <Button
